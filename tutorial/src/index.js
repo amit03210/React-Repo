@@ -10,6 +10,10 @@ class Greeting extends Component {
   }
 }
 
+export default function index() {
+  return <div>index</div>;
+}
+
 const root = ReactDom.createRoot(document.getElementById("root"));
 
 root.render(<Greeting />);
