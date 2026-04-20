@@ -10,9 +10,24 @@ import ReactDom from "react-dom/client";
 //  }
 //}
 
-export default function index() {
-  return <div>index</div>;
+import React, { useState } from 'react';
+
+function Counter() {
+  // Declare a state variable named "count" starting at 0
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
 }
+
+export default Counter;
+
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 
